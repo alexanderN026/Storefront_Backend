@@ -10,7 +10,7 @@ const index = async (_req: Request, res: Response): Promise<void> => {
         res.json(products);
     } catch (err) {
         res.status(450);
-        res.send('Fehler!');
+        res.send('Fehler index!');
     }
 };
 
@@ -21,6 +21,7 @@ const show = async (req: Request, res: Response): Promise<void> => {
         res.json(product);
     } catch (err) {
         res.status(400);
+        res.send('Fehler show!');
     }
 };
 
@@ -37,6 +38,7 @@ const create = async (req: Request, res: Response): Promise<void> => {
         res.json(createProduct);
     } catch (err) {
         res.status(400);
+        res.send('Fehler create!');
     }
 };
 
@@ -52,6 +54,7 @@ const update = async(req: Request, res: Response): Promise<void> => {
         res.json(updateProduct);
     } catch (err) {
         res.status(400);
+        res.send('Fehler update!');
     }
 };
 
@@ -62,6 +65,7 @@ const remove = async(req: Request, res: Response): Promise<void> => {
         res.json(deleteProduct);
     } catch (err) {
         res.status(400);
+        res.send('Fehler delete!');
     }
 };
 

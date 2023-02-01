@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import productRoutes from './handlers/products';
+import userRoutes from './handlers/users';
+import orderRoutes from './handlers/order';
 
 // Node.js kriegt hier Zugriff auf die .env Datei
 dotenv.config();
@@ -26,6 +28,8 @@ app.get('/', (req: Request, res: Response): void => {
 });
 
 productRoutes(app);
+userRoutes(app);
+orderRoutes(app);
 
 if (ENV === 'test') {
     app.listen(port, (): void => {
