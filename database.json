@@ -11,6 +11,7 @@
     "host": {"ENV": "HOSTNAME"},
     "user": {"ENV": "POSTGRES_USER"},
     "password": {"ENV": "POSTGRES_PASSWORD"},
-    "database": {"ENV": "POSTGRES_TEST_DB"}
+    "database": {"ENV": "POSTGRES_TEST_DB"},
+    "port": {"ENV": "PORT"}
   }
 }
